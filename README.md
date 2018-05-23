@@ -48,7 +48,7 @@ Hit the Run button.
 
 - the run/step/pause etc functionality is using our own tool bar
 - the only part of the Atom IDE UI that works are the breakpoints
-- all interaction with lldb is via commands, typed into the Swift IDE panel
+- all interaction with lldb is via commands, typed into the Swift panel
 
 
 ### Credits
