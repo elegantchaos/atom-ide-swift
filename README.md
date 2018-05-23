@@ -11,6 +11,12 @@ It's very rough at the moment, and doesn't actually use much of the atom-ide-ui 
 - tool-bar
 - atom-swift-ui
 
+You can install these with:
+
+```
+apm install language-swift-89 atom-ide-ui tool-bar
+```
+
 ### Credits
 
 Original code by Sam Deane, Elegant Chaos.
