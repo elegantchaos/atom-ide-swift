@@ -9,19 +9,24 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle swift-ide'
-      'command': 'swift-ide:toggle'
+      'label': 'Swift IDE'
+      'submenu': [
+        {
+          'label': 'Debug'
+          'command': 'swift-ide:debug'
+        }
+      ]
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'swift-ide'
+      'label': 'Swift IDE'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'swift-ide:toggle'
+          'label': 'Debug'
+          'command': 'swift-ide:debug'
         }
       ]
     ]
