@@ -9,7 +9,7 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Swift IDE'
+      'label': 'Swift'
       'submenu': [
         {
           'label': 'Build'
@@ -26,7 +26,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Swift IDE'
+      'label': 'Swift'
       'submenu': [
         {
           'label': 'Build'
