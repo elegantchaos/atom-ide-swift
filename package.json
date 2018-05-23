@@ -5,8 +5,7 @@
   "description": "Swift support for Atom IDE.",
   "keywords": [
     "swift",
-    "develop swift",
-    "debug swift",
+    "debugger",
     "swift package manager",
     "lldb",
     "ide"
@@ -16,12 +15,7 @@
   "engines": {
     "atom": ">= 1.19.0"
   },
-  "deserializers": {
-    "Breakpoint": "deserializeBreakpoint",
-    "BreakpointStore": "deserializeBreakpointStore"
-  },
   "dependencies": {
-    "atom-space-pen-views": "^2.0.0",
     "react": "16.3.2",
     "nuclide-debugger-common": "0.7.1"
   },
