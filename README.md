@@ -5,6 +5,14 @@ This is the beginnings of an Atom IDE implementation for Swift.
 It's very rough at the moment, and doesn't actually use much of the atom-ide-ui capabilities.
 
 
+### Supported Platforms
+
+This package is being actively developed on Linux.
+
+At this early stage of development it's only been tested on Ubuntu 18.04, using a custom build of swift/lldb. In theory it should work on other platforms if you have swift/lldb installed.
+
+Please let me know by filing issues.
+
 ### Package Dependencies
 
 You need the following Atom packages:
