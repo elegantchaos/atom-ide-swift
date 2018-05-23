@@ -1,10 +1,26 @@
 # Swift IDE
 
-This is the beginnings of an Atom IDE implementation for Swift.
+This is the very rough beginnings of an Atom IDE implementation for Swift.
 
+What it allows you to do right now is:
+
+- set breakpoitns in your swift code
+- build via (`swift build`)
+- launch your built application within lldb
+
+
+### Background
+
+This started life as a standalone hack which managed its own breakpoints, and launched and interacted with lldb on its own.
+
+In the meantime, the [Atom IDE](https://ide.atom.io/) project has come along, providing some standardised capabilities and user interfaces for better integration of language features into Atom.
+
+The long-term goal is to migrate this project into adopting those capabilities.
+
+However, at the moment,
 It's very rough at the moment, and doesn't actually use much of the atom-ide-ui capabilities.
 
-![screenshot](screenshot.png)
+![screenshotscreenshots/overview.png)
 
 ### Supported Platforms
 
@@ -45,11 +61,42 @@ Enter the name of the product you want to run in the debugger, by doing `e=NameO
 Hit the Run button.
 
 
+### Breakpoints
+
+The breakpoints are managed by the atom-ide code. You should be able to add them by clicking to the left of the gutter in any source file.
+
+You can use `Debugger: Show Window Breakpoints` to show a list of all breakpoints, and can manually move/dock this tab to bring it closer to the Swift/lldb repl.
+
+![breakpoints screenshot](screenshots/breakpoints.png)
+
+
+### Toolbar
+
+The toolbar we're using is the one provided by the `tool-bar` package.
+
+![toolbar](screenshots/toolbar.png)
+
+
+Note that there is also a toolbar, with debugger-ish looking buttons, provided by the Atom ID user interface.
+
+Obviously that's the one we should be using, and integrating properly with it is high on the list of priorities.
+
+For now though, don't let it fool you.
+
+Just to add to the confusion, the Atom IDE user interface appears to add a couple of buttons to the toolbar that we _are_ using.
+
+In the screenshot above, the first two buttons are actually the Atom IDE ones, and nothing to do with us!
+
+
+### Caveat Emptor!
+
 *The plan is obviously to integrate fully into the Atom IDE user interface, but note that currently*:
 
-- the run/step/pause etc functionality is using our own tool bar
+- the run/step/pause etc functionality is using our own tool bar (at the bottom of the screen in the screenshot)
+- you may need to toggle the toolbar visible (`Toolbar: Toggle`)
 - the only part of the Atom IDE UI that works are the breakpoints
 - all interaction with lldb is via commands, typed into the Swift panel
+- the first two buttons on the toolbar in the screenshot belong to atom-ide and not us!
 
 
 ### Credits
