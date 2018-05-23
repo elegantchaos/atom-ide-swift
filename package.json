@@ -1,70 +1,63 @@
 {
-    "name": "ide-swift",
-    "main": "./lib/ide-swift",
-    "version": "1.0.0",
-    "description": "Swift support for Atom IDE.",
-    "keywords": [
-        "swift",
-        "develop swift",
-        "debug swift",
-        "swift package manager",
-        "lldb",
-        "ide"
-    ],
-
-    "repository": "https://github.com/elegantchaos/atom-ide-swift",
-
-    "license": "MIT",
-
-    "engines": {
-        "atom": ">= 1.19.0"
+  "name": "ide-swift",
+  "main": "./lib/ide-swift",
+  "version": "0.1.0",
+  "description": "Swift support for Atom IDE.",
+  "keywords": [
+    "swift",
+    "develop swift",
+    "debug swift",
+    "swift package manager",
+    "lldb",
+    "ide"
+  ],
+  "repository": "https://github.com/elegantchaos/atom-ide-swift",
+  "license": "MIT",
+  "engines": {
+    "atom": ">= 1.19.0"
+  },
+  "deserializers": {
+    "Breakpoint": "deserializeBreakpoint",
+    "BreakpointStore": "deserializeBreakpointStore"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.0",
+    "react": "16.3.2",
+    "nuclide-debugger-common": "0.7.1"
+  },
+  "consumedServices": {
+    "console": {
+      "versions": {
+        "0.1.0": "consumeConsole"
+      }
     },
-
-    "deserializers": {
-        "Breakpoint": "deserializeBreakpoint",
-        "BreakpointStore": "deserializeBreakpointStore"
+    "debugger.remote": {
+      "versions": {
+        "0.0.0": "consumeDebugger"
+      }
     },
-
-    "dependencies": {
-        "atom-space-pen-views": "^2.0.0",
-        "react": "16.3.2",
-        "nuclide-debugger-common": "0.7.1"
-    },
-    "consumedServices": {
-        "console": {
-            "versions": {
-                "0.1.0": "consumeConsole"
-            }
-        },
-        "debugger.remote": {
-            "versions": {
-                "0.0.0": "consumeDebugger"
-            }
-        },
-        "tool-bar": {
-            "versions": {
-                "^0 || ^1": "consumeToolBar"
-            }
-        }
-    },
-    "package-deps": [
-        "atom-ide-ui",
-        "tool-bar:1.1.7"
-    ],
-
-    "configSchema": {
-        "swift": {
-            "title": "swift binary location",
-            "description": "The location of the swift binary.\n \nDefault behaviour if this setting is left empty is to search for a command called `swift`, but you can specify an explicit path or different command here if required.",
-            "type": "string",
-            "default": ""
-        },
-        "lldb": {
-            "title": "lldb binary location",
-            "description": "The location of the lldb binary.\n \nDefault behaviour if this setting is left empty is to search for a command called `lldb`, but you can specify an explicit path or different command here if required.",
-            "type": "string",
-            "default": ""
-        }
+    "tool-bar": {
+      "versions": {
+        "^0 || ^1": "consumeToolBar"
+      }
     }
-
+  },
+  "package-deps": [
+    "atom-ide-ui",
+    "tool-bar:1.1.7"
+  ],
+  "configSchema": {
+    "swift": {
+      "title": "swift binary location",
+      "description": "The location of the swift binary.\n \nDefault behaviour if this setting is left empty is to search for a command called `swift`, but you can specify an explicit path or different command here if required.",
+      "type": "string",
+      "default": ""
+    },
+    "lldb": {
+      "title": "lldb binary location",
+      "description": "The location of the lldb binary.\n \nDefault behaviour if this setting is left empty is to search for a command called `lldb`, but you can specify an explicit path or different command here if required.",
+      "type": "string",
+      "default": ""
+    }
+  }
 }
