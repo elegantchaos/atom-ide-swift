@@ -13,11 +13,11 @@
       'submenu': [
         {
           'label': 'Build'
-          'command': 'swift-ide:build'
+          'command': 'ide-swift:build'
         },
         {
           'label': 'Debug'
-          'command': 'swift-ide:debug'
+          'command': 'ide-swift:debug'
         }
       ]
     }
@@ -30,11 +30,11 @@
       'submenu': [
         {
           'label': 'Build'
-          'command': 'swift-ide:build'
+          'command': 'ide-swift:build'
         },
         {
           'label': 'Debug'
-          'command': 'swift-ide:debug'
+          'command': 'ide-swift:debug'
         }
       ]
     ]

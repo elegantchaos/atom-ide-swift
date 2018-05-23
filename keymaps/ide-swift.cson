@@ -8,7 +8,7 @@
 # https://atom.io/docs/latest/behind-atom-keymaps-in-depth
 
 'atom-workspace':
-  'ctrl-§': 'swift-ide:toggle',
-  'ctrl-b': 'swift-ide:build',
-  'ctrl-r': 'swift-ide:debug',
-  'ctrl-u': 'swift-ide:test'
+  'ctrl-§': 'ide-swift:toggle',
+  'ctrl-b': 'ide-swift:build',
+  'ctrl-r': 'ide-swift:debug',
+  'ctrl-u': 'ide-swift:test'
