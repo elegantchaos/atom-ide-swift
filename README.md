@@ -4,7 +4,7 @@ This is the very rough beginnings of an Atom IDE implementation for Swift.
 
 What it allows you to do right now is:
 
-- set breakpoitns in your swift code
+- set breakpoints in your swift code
 - build via (`swift build`)
 - launch your built application within lldb
 
