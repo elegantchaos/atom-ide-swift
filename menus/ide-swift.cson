@@ -12,6 +12,10 @@
       'label': 'Swift IDE'
       'submenu': [
         {
+          'label': 'Build'
+          'command': 'swift-ide:build'
+        },
+        {
           'label': 'Debug'
           'command': 'swift-ide:debug'
         }
@@ -24,6 +28,10 @@
     'submenu': [
       'label': 'Swift IDE'
       'submenu': [
+        {
+          'label': 'Build'
+          'command': 'swift-ide:build'
+        },
         {
           'label': 'Debug'
           'command': 'swift-ide:debug'
