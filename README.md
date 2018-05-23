@@ -6,6 +6,7 @@ What it allows you to do right now is:
 
 - set breakpoints in your swift code
 - build via (`swift build`)
+- view a list of build warnings and errors
 - launch your built application within lldb
 
 ![screenshots](screenshots/overview.png)
@@ -25,14 +26,22 @@ In the meantime, the [Atom IDE](https://ide.atom.io/) project has come along, pr
 
 The long-term goal for this package is to migrate into adopting those capabilities.
 
-However, at the moment it's still very rough, and the integration is minimal. In fact, the only integration that's been attempted is that of the UI for setting breakpoints. Everything else is handled through a custom UI.
+However, at the moment it's still very rough, and the integration is minimal.
+
+In fact, the only integrations that have been attempted so far are setting/viewing breakpoints, and viewing build warnings and errors.
+
+The actual building and debugging process is handled with custom code.
 
 
 ### Supported Platforms
 
 This package is being actively developed on Linux.
 
-At this early stage of development it's only been tested on Ubuntu 18.04, using a custom build of swift/lldb. In theory it should work on other platforms if you have swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
+At this early stage of development it's only been tested on Ubuntu 18.04, and macOS 10.12.
+
+On Ubuntu I'm using an unmodified version of swift/lldb built locally, roughly equivalent to Swift 4.2.
+
+In theory the package should work fine on any platforms that has swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
 
@@ -71,9 +80,18 @@ Hit the Run button.
 
 The breakpoints are managed by the atom-ide code. You should be able to add them by clicking to the left of the gutter in any source file.
 
-You can use `Debugger: Show Window Breakpoints` to show a list of all breakpoints, and can manually move/dock this tab to bring it closer to the Swift/lldb repl.
+Open the command palette and select `Debugger: Show Window Breakpoints` to show a list of all breakpoints, and can manually move/dock this tab to bring it closer to the Swift/lldb repl.
 
 ![breakpoints screenshot](screenshots/breakpoints.png)
+
+
+### Diagnostics
+
+If the build produces warnings or errors, they should show up in the diagnostics panel.
+
+![diagnostics](screenshots/diagnostics.png)
+
+To get this panel to show, open the command palette and select `Diagnostics: Toggle Table`.
 
 
 ### Toolbar
