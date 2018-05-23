@@ -1,0 +1,29 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Created by Sam Deane, 23/05/2018.
+# All code (c) 2018 - present day, Elegant Chaos Limited.
+# For licensing terms, see http://elegantchaos.com/license/liberal/.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle swift-ide'
+      'command': 'swift-ide:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'swift-ide'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'swift-ide:toggle'
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Created by Sam Deane, 23/05/2018.
+# All code (c) 2018 - present day, Elegant Chaos Limited.
+# For licensing terms, see http://elegantchaos.com/license/liberal/.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+
+'atom-workspace':
+  'ctrl-§': 'swift-ide:toggle'
