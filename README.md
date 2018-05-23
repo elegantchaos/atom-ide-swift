@@ -4,6 +4,7 @@ This is the beginnings of an Atom IDE implementation for Swift.
 
 It's very rough at the moment, and doesn't actually use much of the atom-ide-ui capabilities.
 
+![screenshot](screenshot.png)
 
 ### Supported Platforms
 
