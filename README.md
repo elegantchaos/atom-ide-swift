@@ -8,6 +8,14 @@ What it allows you to do right now is:
 - build via (`swift build`)
 - launch your built application within lldb
 
+![screenshots](screenshots/overview.png)
+
+
+It is very very basic, so please don't expect anything polished, and prepare for weirdness and confusion!
+
+That said, by all means [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
+
+
 
 ### Background
 
@@ -15,20 +23,18 @@ This started life as a standalone hack which managed its own breakpoints, and la
 
 In the meantime, the [Atom IDE](https://ide.atom.io/) project has come along, providing some standardised capabilities and user interfaces for better integration of language features into Atom.
 
-The long-term goal is to migrate this project into adopting those capabilities.
+The long-term goal for this package is to migrate into adopting those capabilities.
 
-However, at the moment,
-It's very rough at the moment, and doesn't actually use much of the atom-ide-ui capabilities.
+However, at the moment it's still very rough, and the integration is minimal. In fact, the only integration that's been attempted is that of the UI for setting breakpoints. Everything else is handled through a custom UI.
 
-![screenshotscreenshots/overview.png)
 
 ### Supported Platforms
 
 This package is being actively developed on Linux.
 
-At this early stage of development it's only been tested on Ubuntu 18.04, using a custom build of swift/lldb. In theory it should work on other platforms if you have swift/lldb installed.
+At this early stage of development it's only been tested on Ubuntu 18.04, using a custom build of swift/lldb. In theory it should work on other platforms if you have swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
 
-Please let me know by filing issues.
+
 
 ### Package Dependencies
 
