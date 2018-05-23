@@ -49,7 +49,7 @@ In theory the package should work fine on any platforms that has swift/lldb inst
 
 You need the following Atom packages:
 
-- language-swiftt89
+- language-swift-89
 - tool-bar
 - atom-swift-ui
 
