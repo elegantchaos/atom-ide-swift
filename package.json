@@ -13,7 +13,7 @@
     ],
 
     "repository": "https://github.com/elegantchaos/atom-ide-swift",
-    
+
     "license": "MIT",
 
     "engines": {
@@ -40,20 +40,17 @@
             "versions": {
                 "0.0.0": "consumeDebugger"
             }
-        }
-    },
-    "package-deps": [
-        "atom-ide-ui",
-        "tool-bar:1.1.7"
-    ],
-
-    "consumedServices": {
+        },
         "tool-bar": {
             "versions": {
                 "^0 || ^1": "consumeToolBar"
             }
         }
     },
+    "package-deps": [
+        "atom-ide-ui",
+        "tool-bar:1.1.7"
+    ],
 
     "configSchema": {
         "swift": {
