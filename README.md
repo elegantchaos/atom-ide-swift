@@ -11,7 +11,7 @@ What it allows you to do right now is:
 ![screenshots](screenshots/overview.png)
 
 
-It is very very basic, so please don't expect anything polished, and prepare for weirdness and confusion!
+It is very very basic, so please don't expect anything polished, and prepare yourself for all sorts of weirdness and confusion!
 
 That said, by all means [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
 
@@ -85,9 +85,11 @@ The toolbar we're using is the one provided by the `tool-bar` package.
 
 Note that there is also a toolbar, with debugger-ish looking buttons, provided by the Atom ID user interface.
 
+![atom toolbar](screenshots/atom-debugger-toolbar.png)
+
 Obviously that's the one we should be using, and integrating properly with it is high on the list of priorities.
 
-For now though, don't let it fool you.
+For now though, don't let it fool you!
 
 Just to add to the confusion, the Atom IDE user interface appears to add a couple of buttons to the toolbar that we _are_ using.
 
