@@ -109,9 +109,9 @@ In the screenshot above, the first two buttons are actually the Atom IDE ones, a
 
 ### Credits
 
-Original code by Sam Deane, Elegant Chaos.
+Most code by Sam Deane, Elegant Chaos.
 
 Thanks to:
 
 - the Swift and Atom teams, for so much awesome
-- [@aciidbomb3r] for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling
+- [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling; a few traces of the swift-debugger code still linger in the current codebase
