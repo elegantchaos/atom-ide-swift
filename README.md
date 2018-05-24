@@ -18,7 +18,7 @@ At this stage the package is quite basic, so be prepared for some rough edges. T
 
 ### Background
 
-This started life as a standalone hack which managed its own breakpoints, and launched and interacted with lldb on its own.
+This started life as a package which managed its own breakpoints and launched and interacted with lldb on its own, and a separate package which provided Swift auto-completion.
 
 In the meantime, the [Atom IDE](https://ide.atom.io/) project has come along, providing some standardised capabilities and user interfaces for better integration of language features into Atom.
 
@@ -67,7 +67,7 @@ Open a Swift project - it needs to be one that builds with `swift build`.
 
 Set some breakpoints in your source code, using the Atom IDE breakpoints UI.
 
-Choose `Swift IDE` / `Debug` from the package menu.
+Choose `Swift: Debug` from the command palette.
 
 Enter the name of the product you want to run in the debugger, by doing `e=NameOfYourProduct`
 
@@ -129,5 +129,6 @@ Most code by Sam Deane, Elegant Chaos.
 
 Thanks to:
 
-- the Swift and Atom teams, for so much awesome
-- [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling; a few traces of the swift-debugger code still linger in the current codebase
+- the Swift and Atom teams, for so much awesome.
+- [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling; a few traces of the swift-debugger code still linger in the current codebase.
+- [JS Simard](https://github.com/jpsim) for [sourcekitten](https://github.com/jpsim/SourceKitten).
