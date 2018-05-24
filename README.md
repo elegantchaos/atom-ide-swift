@@ -1,20 +1,18 @@
 # Swift IDE
 
-This is the very rough beginnings of an Atom IDE implementation for Swift.
+This is the rough beginnings of an Atom IDE implementation for Swift.
 
 What it allows you to do right now is:
 
-- set breakpoints in your swift code
+- auto-completion of Swift code (using sourcekitten)
 - build via (`swift build`)
 - view a list of build warnings and errors
+- set breakpoints in your swift code
 - launch your built application within lldb
 
 ![screenshots](screenshots/overview.png)
 
-
-It is very very basic, so please don't expect anything polished, and prepare yourself for all sorts of weirdness and confusion!
-
-That said, by all means [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
+At this stage the package is quite basic, so be prepared for some rough edges. That said, please do [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
 
