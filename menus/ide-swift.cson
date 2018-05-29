@@ -12,6 +12,10 @@
       'label': 'Swift'
       'submenu': [
         {
+          'label': 'Set Target'
+          'command': 'ide-swift:target'
+        },
+        {
           'label': 'Build'
           'command': 'ide-swift:build'
         },
@@ -28,6 +32,10 @@
     'submenu': [
       'label': 'Swift'
       'submenu': [
+        {
+          'label': 'Set Target'
+          'command': 'ide-swift:target'
+        },
         {
           'label': 'Build'
           'command': 'ide-swift:build'
