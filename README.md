@@ -9,10 +9,12 @@ What it allows you to do right now is:
 - view a list of build warnings and errors
 - set breakpoints in your swift code
 - launch your built application within lldb
+- pause at breakpoints
+- interact with lldb using its command-line interface
 
 ![screenshots](screenshots/overview.png)
 
-At this stage the package is quite basic, so be prepared for some rough edges. That said, please do [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
+At this stage the package has many rough edges. That said, please do [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
 
@@ -24,11 +26,7 @@ In the meantime, the [Atom IDE](https://ide.atom.io/) project has come along, pr
 
 The long-term goal for this package is to migrate into adopting those capabilities.
 
-However, at the moment it's still very rough, and the integration is minimal.
-
-In fact, the only integrations that have been attempted so far are setting/viewing breakpoints, and viewing build warnings and errors.
-
-The actual building and debugging process is handled with custom code.
+However, at the moment the integration is restricted to setting/viewing breakpoints, and viewing build warnings and errors. The actual building and debugging process is handled with custom code.
 
 
 ### Supported Platforms
@@ -37,7 +35,7 @@ This package is being actively developed on Linux.
 
 At this early stage of development it's only been tested on Ubuntu 18.04, and macOS 10.12.
 
-On Ubuntu I'm using an unmodified version of swift/lldb built locally, roughly equivalent to Swift 4.2.
+On Ubuntu I'm using an unmodified version of swift/lldb that I built locally, roughly equivalent to Swift 4.2.
 
 In theory the package should work fine on any platforms that has swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
 
@@ -67,16 +65,12 @@ Open a Swift project - it needs to be one that builds with `swift build`.
 
 Set some breakpoints in your source code, using the Atom IDE breakpoints UI.
 
-Choose `Swift: Debug` from the command palette.
-
-Enter the name of the product you want to run in the debugger, by doing `e=NameOfYourProduct`
-
-Hit the Run button.
+Choose `IDE Swift: Debug` from the command palette.
 
 
 ### Breakpoints
 
-The breakpoints are managed by the atom-ide code. You should be able to add them by clicking to the left of the gutter in any source file.
+You can add breakpoints by clicking to the left of the gutter in any source file.
 
 Open the command palette and select `Debugger: Show Window Breakpoints` to show a list of all breakpoints, and can manually move/dock this tab to bring it closer to the Swift/lldb repl.
 
@@ -107,7 +101,7 @@ Obviously that's the one we should be using, and integrating properly with it is
 
 For now though, don't let it fool you!
 
-Just to add to the confusion, the Atom IDE user interface appears to add a couple of buttons to the toolbar that we _are_ using.
+Just to add to the confusion, the Atom IDE user interface adds a couple of buttons to the toolbar that we _are_ using.
 
 In the screenshot above, the first two buttons are actually the Atom IDE ones, and nothing to do with us!
 
@@ -131,4 +125,5 @@ Thanks to:
 
 - the Swift and Atom teams, for so much awesome.
 - [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling; a few traces of the swift-debugger code still linger in the current codebase.
+- [@kelvin13](https://github.com/kelvin13) for [language-swift89](https://github.com/kelvin13/atom-swift-89/blob/master/settings/language-swift.cson).
 - [JS Simard](https://github.com/jpsim) for [sourcekitten](https://github.com/jpsim/SourceKitten).
