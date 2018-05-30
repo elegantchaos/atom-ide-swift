@@ -61,7 +61,7 @@ Make sure that the package dependencies are installed and enabled.
 
 Go to the preferences for this package and enter paths for the `swift` and `lldb` executables. In theory they should get picked up from your path if you leave these settings blank, but at this early stage of the package's development, it's safer to enter them explicitly.
 
-Open a Swift project - it needs to be one that builds with `swift build`.
+Open a Swift project that builds with `swift build`.
 
 Set some breakpoints in your source code, using the Atom IDE breakpoints UI.
 
