@@ -17,8 +17,7 @@ What it allows you to do right now is:
 At this stage the package has many rough edges. That said, please do [file suggestions, comments and bug reports](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
-
-### Background
+## Background
 
 This started life as a package which managed its own breakpoints and launched and interacted with lldb on its own, and a separate package which provided Swift auto-completion.
 
@@ -40,6 +39,16 @@ On Ubuntu I'm using an unmodified version of swift/lldb that I built locally, ro
 In theory the package should work fine on any platforms that has swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
+### Caveat Emptor!
+
+*The plan is obviously to integrate fully into the Atom IDE user interface, but note that currently*:
+
+- the run/step/pause etc functionality is using our own tool bar (at the bottom of the screen in the screenshot)
+- you may need to toggle the toolbar visible (`Toolbar: Toggle`)
+- the only part of the Atom IDE UI that works are the breakpoints
+- all interaction with lldb is via commands, typed into the Swift panel
+- the first two buttons on the toolbar in the screenshot belong to atom-ide and not us!
+
 
 ### Package Dependencies
 
@@ -55,7 +64,7 @@ You can install these with:
 apm install language-swift-89 atom-ide-ui tool-bar
 ```
 
-### Usage
+## Usage
 
 Make sure that the package dependencies are installed and enabled.
 
@@ -106,24 +115,25 @@ Just to add to the confusion, the Atom IDE user interface adds a couple of butto
 In the screenshot above, the first two buttons are actually the Atom IDE ones, and nothing to do with us!
 
 
-### Caveat Emptor!
+### Builder Support
 
-*The plan is obviously to integrate fully into the Atom IDE user interface, but note that currently*:
+The Swift Package Manager (which we use as our build system), is a capable package manager, but quite basic as a build system. In particular, it currently doesn't support running scripts or other tools as part of the build, or have a way to specify configuration settings in bulk and apply them uniformly.
 
-- the run/step/pause etc functionality is using our own tool bar (at the bottom of the screen in the screenshot)
-- you may need to toggle the toolbar visible (`Toolbar: Toggle`)
-- the only part of the Atom IDE UI that works are the breakpoints
-- all interaction with lldb is via commands, typed into the Swift panel
-- the first two buttons on the toolbar in the screenshot belong to atom-ide and not us!
+To address this, I have an experimental build system layered on top of the Swift Package Manager, which is imaginatively titled [Builder](https://github.com/elegantchaos/builder).
+
+If the project you are attempting to build/test/debug is using Builder, then the IDE will attempt to use it instead of the Swift Package Manager.
+
+If you're not using Builder, you shouldn't notice any difference.
 
 
-### Credits
 
-Most code by Sam Deane, Elegant Chaos.
+## Credits
+
+The bulk of the code is by Sam Deane, Elegant Chaos.
 
 Thanks to:
 
 - the Swift and Atom teams, for so much awesome.
-- [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling; a few traces of the swift-debugger code still linger in the current codebase.
+- [@aciidb0mb3r](https://github.com/aciidb0mb3r/) for [swift-debugger](https://github.com/aciidb0mb3r/atom-swift-debugger), which got the ball rolling.
 - [@kelvin13](https://github.com/kelvin13) for [language-swift89](https://github.com/kelvin13/atom-swift-89/blob/master/settings/language-swift.cson).
-- [JS Simard](https://github.com/jpsim) for [sourcekitten](https://github.com/jpsim/SourceKitten).
+- [@jpsim](https://github.com/jpsim) for [sourcekitten](https://github.com/jpsim/SourceKitten).
