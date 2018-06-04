@@ -53,6 +53,12 @@
         }
     },
     "providedServices": {
+        "debugger.provider": {
+            "description": "Debugger engine",
+            "versions": {
+                "0.0.0": "createDebuggerProvider"
+            }
+        },
         "autocomplete.provider": {
             "versions": {
                 "2.0.0": "getProvider"
