@@ -30,13 +30,15 @@ However, at the moment the integration is restricted to setting/viewing breakpoi
 
 ### Supported Platforms
 
-This package is being actively developed on Linux.
+A large part of the motivation for this project is that I'm using Linux a lot at the moment, and so don't have access to Xcode.
+
+As a result, this package is being actively developed on Linux (currently Ubuntu 18.04).
 
 At this early stage of development it's only been tested on Ubuntu 18.04, and macOS 10.12.
 
 On Ubuntu I'm using an unmodified version of swift/lldb that I built locally, roughly equivalent to Swift 4.2.
 
-In theory the package should work fine on any platforms that has swift/lldb installed. If it doesn, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
+In theory the package should work fine on any platforms that has swift/lldb installed. If it doesn't, [please let me know](https://github.com/elegantchaos/atom-ide-swift/issues).
 
 
 ### Caveat Emptor!
