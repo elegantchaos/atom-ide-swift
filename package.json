@@ -77,6 +77,12 @@
       "description": "The binary to run to obtain completions.\n \nDefault behaviour if this setting is left empty is to search for a command called `sourcekitten`, but you can specify an explicit path or different command here if required.",
       "type": "string",
       "default": ""
+    },
+    "sourcekit-lsp": {
+      "title": "sourcekit-lsp binary Location",
+      "description": "The binary for the sourcekit-lsp server.\n \nDefault behaviour if this setting is left empty is to search for a command called `sourcekit-lsp`, but you can specify an explicit path or different command here if required.",
+      "type": "string",
+      "default": ""
     }
   }
 }
