@@ -1,3 +1,11 @@
+**NOTE on sourcekit-lsp**
+
+This branch contains an attempt to replace our use of sourcekitten with the new [sourcekit-lsp](https://github.com/apple/sourcekit-lsp) daemon.
+
+As such, it's even more of a work-in-progress than the project as a whole.
+
+You will need to [build and install sourcekit-lsp](https://github.com/apple/sourcekit-lsp#building-sourcekit-lsp), and should make sure that you're using the right version of the Swift toolchain (specified in their build notes).
+
 # Swift IDE
 
 This is the rough beginnings of an Atom IDE implementation for Swift.
