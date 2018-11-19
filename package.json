@@ -145,7 +145,7 @@
             {
                 "type": "mi",
                 "label": "Native debugging via gdb or lldb",
-                "program": "./src/RunTranspiledServer.js",
+                "program": "./debugger/MIDebugSession.js",
                 "runtime": "node",
                 "configurationAttributes": {
                     "launch": {
