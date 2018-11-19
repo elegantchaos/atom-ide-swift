@@ -16,10 +16,19 @@
         "atom": ">= 1.19.0"
     },
     "dependencies": {
-        "react": "16.3.2",
-        "nuclide-debugger-common": "0.7.1",
         "atom-select-list": "0.7.1",
-        "atom-languageclient": "^0.8.3"
+        "atom-languageclient": "^0.8.3",
+        "big-integer": "1.6.17",
+        "nuclide-commons": "0.7.2",
+        "nuclide-commons-atom": "0.7.2",
+        "nuclide-debugger-common": "0.7.2",
+        "nuclide-prebuilt-libs": "0.5.2",
+        "nullthrows": "1.0.0",
+        "react": "16.6.0",
+        "rxjs-compat": "6.3.3",
+        "vscode-debugadapter": "1.24.0",
+        "vscode-debugprotocol": "1.24.0",
+        "yargs": "3.32.0"
     },
     "package-deps": [
         "atom-ide-ui",
@@ -83,6 +92,12 @@
             "versions": {
                 "0.1.0": "provideOutlines"
             }
+        },
+        "debugger.provider": {
+            "description": "LLDB debugger engine.",
+            "versions": {
+                "0.0.0": "provideDebugger"
+            }
         }
     },
     "configSchema": {
@@ -104,5 +119,120 @@
             "type": "string",
             "default": ""
         }
+    },
+    "categories": [
+      "Debuggers"
+    ],
+    "contributes": {
+        "breakpoints": [
+            {
+                "language": "c"
+            },
+            {
+                "language": "c++"
+            },
+            {
+                "language": "cpp"
+            },
+            {
+                "language": "swift"
+            },
+            {
+                "language": "objective-c"
+            }
+        ],
+        "debuggers": [
+            {
+                "type": "mi",
+                "label": "Native debugging via gdb or lldb",
+                "program": "./src/RunTranspiledServer.js",
+                "runtime": "node",
+                "configurationAttributes": {
+                    "launch": {
+                        "required": [
+                            "cwd",
+                            "program"
+                        ],
+                        "properties": {
+                            "cwd": {
+                                "type": "string",
+                                "description": "Working directory to run program in",
+                                "default": "${workspaceFolder}"
+                            },
+                            "program": {
+                                "type": "string",
+                                "description": "Absolute path of program to run"
+                            },
+                            "args": {
+                                "type": "array",
+                                "description": "Arguments to pass in on the command line",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "sourcePath": {
+                                "type": "string",
+                                "description": "Path to search for source files"
+                            },
+                            "sourcePaths": {
+                                "type": "array",
+                                "description": "An array of paths to search for source files. If present, overrides the single 'sourcePath' parameter."
+                            },
+                            "env": {
+                                "type": "string",
+                                "description": "Environment variables to start process with"
+                            }
+                        }
+                    },
+                    "attach": {
+                        "required": [
+                            "pid"
+                        ],
+                        "properties": {
+                            "pid": {
+                                "type": "number",
+                                "description": "Process id of the process to debug"
+                            },
+                            "sourcePath": {
+                                "type": "string",
+                                "description": "Path to search for source files"
+                            },
+                            "sourcePaths": {
+                                "type": "array",
+                                "description": "An array of paths to search for source files. If present, overrides the single 'sourcePath' parameter."
+                            },
+                            "stopOnAttach": {
+                                "type": "boolean",
+                                "description": "If true, target will break into debugger on attach",
+                                "default": false
+                            }
+                        }
+                    },
+                    "configurationSnippets": [
+                        {
+                            "label": "Native Debugger: Launch",
+                            "description": "A new configuration for launching a native program",
+                            "body": {
+                                "type": "mi",
+                                "request": "launch",
+                                "name": "Launch Program",
+                                "cwd": "${workspaceFolder}",
+                                "program": "${workspaceFolder}/a.out"
+                            }
+                        },
+                        {
+                            "label": "Native Debugger: Attach",
+                            "description": "A new configuration for attaching to a running native program",
+                            "body": {
+                                "type": "mi",
+                                "request": "attach",
+                                "name": "Attach to Program",
+                                "pid": 1
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
     }
 }
